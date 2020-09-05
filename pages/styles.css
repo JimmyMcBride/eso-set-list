@@ -1,0 +1,35 @@
+.health {
+  color: crimson;
+}
+
+.stamina {
+  color: green;
+}
+
+.magicka {
+  color: dodgerblue;
+}
+
+.armor {
+  color: silver;
+}
+
+.weapon {
+  color: rgb(81, 129, 81);
+}
+
+.spell {
+  color: rgb(147, 197, 248);
+}
+
+.s-pen {
+  color: rgb(190, 171, 171);
+}
+
+.p-pen {
+  color: rgb(158, 171, 184);
+}
+
+.bg {
+  background: rgb(223, 223, 223);
+}

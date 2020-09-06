@@ -65,6 +65,12 @@ export default function Index({ sets }) {
           Welcome to <span className="health">FireNinja's 🔥</span> ESO Set
           Search Tool
         </Text>
+        <Text>
+          To use this API go to{" "}
+          <a href="https://eso-sets.herokuapp.com">
+            https://eso-sets.herokuapp.com
+          </a>
+        </Text>
       </Card>
       <Card invert shade w="96%" maxW="55rem">
         <Flex as="form" onSubmit={handleSubmit} drape stretch>

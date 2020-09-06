@@ -12,6 +12,7 @@
     "next": "9.5.3",
     "react": "16.13.1",
     "react-dom": "16.13.1",
+    "react-hook-form": "^6.7.2",
     "sriracha-ui": "^0.7.6"
   }
 }

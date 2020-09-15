@@ -24,13 +24,6 @@ export default function Index({ sets }) {
         set.name.toLowerCase().includes(e.target.value.toLowerCase())
       )
     );
-    if (e.keyCode === 8 || e.keyCode === 46) {
-      setSearch(
-        search.filter((set) =>
-          set.name.toLowerCase().includes(e.target.value.toLowerCase())
-        )
-      );
-    }
   };
   const handleFilterSets = (e) => {
     e.preventDefault();
@@ -128,21 +121,30 @@ export default function Index({ sets }) {
               key={set.id}
               w="96%"
               maxW="35rem"
+              h="100%"
               invert
               shade
               radius="0.5rem"
               p="0.4rem 2rem"
+              as="a"
+              href={set.link}
+              pointer
+              hvrColor={theme.colors.gray0}
             >
-              <Text bold lf color={theme.colors.amber5}>
+              <Text bold lf color={theme.colors.amber5} pointer>
                 {set.name}
               </Text>
               <Box stretch h="0.1rem" bg={theme.colors.amber1} />
-              <Text>
+              <Text pointer>
                 <strong>Type:</strong>{" "}
                 <span style={{ color: theme.colors.brown2 }}>{set.type}</span>
               </Text>
               <Box stretch h="0.1rem" bg={theme.colors.amber1} />
-              <Text dangerouslySetInnerHTML={{ __html: set.bonuses }} />
+              <Text
+                pointer
+                m="0 0 1rem 0"
+                dangerouslySetInnerHTML={{ __html: set.bonuses }}
+              />
             </Card>
           ))}
       </Flex>

@@ -20,7 +20,7 @@ export default function Index({ sets }) {
   const handleSearch = (e) => {
     e.preventDefault();
     setSearch(
-      search.filter((set) =>
+      sets.filter((set) =>
         set.name.toLowerCase().includes(e.target.value.toLowerCase())
       )
     );
@@ -64,6 +64,10 @@ export default function Index({ sets }) {
             https://eso-sets.herokuapp.com
           </a>
         </Text>
+        <Text>
+          All this data has been gather from{" "}
+          <a href="https://eso-sets.com">eso-sets.com</a>
+        </Text>
       </Card>
       <Card invert shade w="96%" maxW="55rem">
         <Flex as="form" onSubmit={handleSubmit} drape stretch>
@@ -75,7 +79,6 @@ export default function Index({ sets }) {
             w="35rem"
             placeholder="Type the name of a set..."
             onChange={handleSearch}
-            // onKeyDown={handleKeyDown}
             ref={searchRef}
           />
           <Box h="1rem" />
@@ -90,22 +93,14 @@ export default function Index({ sets }) {
             ref={filterRef}
           >
             <option value="All Sets">All Sets</option>
-            <option value="Craftable Set">Craftable Set</option>
-            <option value="Overland Set">Overland Set</option>
-            <option value="Dungeon Set">Dungeon Set</option>
-            <option value="Monster Helm Set">Monster Helm Set</option>
-            <option value="Asylum Weapons Set">Asylum Weapons Set</option>
-            <option value="Trail Set">Trail Set</option>
-            <option value="Maelstorm Arena Set">Maelstorm Arena Set</option>
-            <option value="Dragonstar Arena Set">Dragonstar Arena Set</option>
-            <option value="Blackrose Weapons Set">Blackrose Weapons Set</option>
-            <option value="Blackrose Prison Set">Blackrose Prison Set</option>
-            <option value="Cyrodiil Set">Cyrodiil Set</option>
-            <option value="Imperial City Set">Imperial City Set</option>
-            <option value="Elite Gear Set">Elite Gear Set</option>
-            <option value="Rewards For The Worthy Set">
-              Rewards For The Worthy Set
-            </option>
+            <option value="Craftable">Craftable</option>
+            <option value="Overland">Overland</option>
+            <option value="Arena">Arena</option>
+            <option value="Monster Set">Monster Set</option>
+            <option value="Dungeon">Dungeon</option>
+            <option value="Trail">Trail</option>
+            <option value="PvP">PvP</option>
+            <option value="Unknown">Unknown</option>
             <option value="Mythic">Mythic</option>
           </Input>
           <Box h="1rem" />
